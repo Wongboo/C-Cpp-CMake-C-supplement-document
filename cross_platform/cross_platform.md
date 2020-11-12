@@ -1,7 +1,7 @@
 ## Entry
 [Homepage](../README.md)
-[cross platform judgement](cross_platform.md)
-[link library](library.md)
+[cross_platform_judgement](cross_platform.md)
+[link_library](library.md)
 
 [platform](##platform)
 [SIMD](##simd)
@@ -10,8 +10,8 @@
 ## Platform
 ### Entry
 [Homepage](../README.md)
-[cross platform judgement](cross_platform.md)
-[link library](library.md)
+[cross_platform_judgement](cross_platform.md)
+[link_library](library.md)
 ```C++
 //detect WIN32
 
@@ -44,8 +44,8 @@ if (CMAKE_<LANG>_COMPILER_ID STREQUAL "Clang")
 ## SIMD
 ### Entry
 [Homepage](../README.md)
-[cross platform judgement](cross_platform.md)
-[link library](library.md)
+[cross_platform_judgement](cross_platform.md)
+[link_library](library.md)
 ```C++
 //GCC https://gcc.gnu.org/onlinedocs/gcc/Loop-Specific-Pragmas.html
 //CLANG https://llvm.org/docs/Vectorizers.html
@@ -67,8 +67,8 @@ endif()
 ## forceinline
 ### Entry
 [Homepage](../README.md)
-[cross platform judgement](cross_platform.md)
-[link library](library.md)
+[cross_platform_judgement](cross_platform.md)
+[link_library](library.md)
 ```C++
 #ifndef _WIN32
 #define __forceinline inline __attribute__((always_inline))
@@ -78,8 +78,8 @@ endif()
 ## _s
 ### Entry
 [Homepage](../README.md)
-[cross platform judgement](cross_platform.md)
-[link library](library.md)
+[cross_platform_judgement](cross_platform.md)
+[link_library](library.md)
 ```C++
 #ifdef _MSC_VER
 #ifndef _CRT_SECURE_NO_WARNINGS
