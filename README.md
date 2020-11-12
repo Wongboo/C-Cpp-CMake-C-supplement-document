@@ -41,9 +41,9 @@ IF (CMAKE_SYSTEM_NAME MATCHES "Linux")
 if (MSVC)
 #detect GCC, use C++
 if (CMAKE_COMPILER_IS_GNUCXX)
-#or other lang
-if (CMAKE_<LANG>_COMPILER_ID STREQUAL "Clang")
 #detect Clang
+if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+#or other lang
 if (CMAKE_<LANG>_COMPILER_ID STREQUAL "Clang")
 ```
 Note that, in most case, the simplest way for one compiler may not work on other, say, if(GCC) is invalid. And you also want more, for example, \_\_forceinline or inline \_\_attribute__((always_inline)), or __declspec, so on

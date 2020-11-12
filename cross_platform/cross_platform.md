@@ -6,7 +6,7 @@
 [platform](##platform)
 [SIMD](##simd)
 [forceinline](##forceinline)
-[_s](##_s)
+[_s_function](##_s)
 ## Platform
 ### Entry
 [Homepage](../README.md)
@@ -36,9 +36,9 @@ IF (CMAKE_SYSTEM_NAME MATCHES "Linux")
 if (MSVC)
 #detect GCC, use C++
 if (CMAKE_COMPILER_IS_GNUCXX)
-#or other lang
-if (CMAKE_<LANG>_COMPILER_ID STREQUAL "Clang")
 #detect Clang
+if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+#or other lang
 if (CMAKE_<LANG>_COMPILER_ID STREQUAL "Clang")
 ```
 ## SIMD
@@ -81,9 +81,8 @@ endif()
 [cross_platform_judgement](cross_platform.md)
 [link_library](library.md)
 ```C++
-#ifdef _MSC_VER
-#ifndef _CRT_SECURE_NO_WARNINGS
+//if not MSVC, do not define MACRO, to control MACRO num
+#if defined(_MSC_VER) && !defined(_CRT_SECURE_NO_WARNINGS)
 #define _CRT_SECURE_NO_WARNINGS
-#endif
 #endif
 ```
